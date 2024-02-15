@@ -1,0 +1,15 @@
+﻿@model Personaje
+<h1>Update personaje</h1>
+
+<form method="post">
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre" class="form-control" value="@Model.Nombre" />
+
+    <label>Imagen:</label>
+    <input type="text" name="imagen" class="form-control" value="@Model.Imagen" />
+    <input type="hidden" name="idpersonaje" class="form-control" value="@Model.IdPersonaje" />
+
+
+    <button class="btn btn-info">Modificar Personaje</button>
+</form>

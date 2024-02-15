@@ -56,5 +56,7 @@ namespace NetCoreLinqToSqlInjection.Controllers
             this.repo.DeleteDoctor(iddoctor);
             return RedirectToAction("Index");
         }
+
+
     }
 }

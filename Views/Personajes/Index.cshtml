@@ -15,6 +15,12 @@
                 <div class="card-body">
                     <h5 class="card-title">@per.Nombre</h5>
                     <p class="card-text">ID: @per.IdPersonaje</p>
+                    <a asp-controller="Personajes" asp-action="Delete" asp-route-idpersonaje="@per.IdPersonaje" class="btn btn-outline-danger">
+                        Borrar
+                    </a>
+                    <a asp-controller="Personajes" asp-action="Update" asp-route-idpersonaje="@per.IdPersonaje" class="btn btn-outline-warning">
+                        Modificar
+                    </a>
                 </div>
             </div>
         </div>
