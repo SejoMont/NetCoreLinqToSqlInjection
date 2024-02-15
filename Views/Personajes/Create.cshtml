@@ -1,0 +1,22 @@
+﻿<h1>New Persnaje</h1>
+
+<p>
+    <a asp-controller="Personajes" asp-action="Index">
+        Back to Index
+    </a>
+</p>
+
+<form method="post">
+    <label>Id Personaje:</label>
+    <input type="number" class="form-control" name="idpersonaje" />
+
+    <label>Nombre:</label>
+    <input type="text" class="form-control" name="nombre" />
+
+    <label>Imagen:</label>
+    <input type="text" class="form-control" name="imagen" />
+
+    <button class="btn btn-outline-info">
+        Create Personaje
+    </button>
+</form>

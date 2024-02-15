@@ -1,0 +1,41 @@
+﻿@model List<Doctor>
+
+<h1>Buscar Doctores Especialidad</h1>
+
+<p>
+    <a asp-controller="Doctores" asp-action="Create">
+        Nuevo Doctor
+    </a>
+</p>
+
+<form method="post">
+    <label>Especialidad</label>
+    <input type="text" name="especialidad" class="form-control" required /> <br />
+    <button class="btn btn-outline-warning">
+        Buscar doctores
+    </button>
+</form>
+<h2 style="color:red">@ViewData["MENSAJE"]</h2>
+
+@if (Model != null)
+{
+    <table class="table table-striped">
+        <thead>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th>Salario</th>
+        <th>Hospital</th>
+        </thead>
+        <tbody>
+            @foreach (Doctor doc in Model)
+            {
+                <tr>
+                    <td>@doc.Apellido</td>
+                    <td>@doc.Especialidad</td>
+                    <td>@doc.Salario</td>
+                    <td>@doc.IdHospistal</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

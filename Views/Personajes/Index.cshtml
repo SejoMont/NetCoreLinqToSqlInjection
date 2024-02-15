@@ -1,0 +1,22 @@
+﻿@model List<Personaje>
+
+<p>
+    <a asp-controller="Personajes" asp-action="Create">
+        Nuevo Personaje
+    </a>
+</p>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach(Personaje per in Model)
+    {
+        <div class="col">
+            <div class="card">
+                <img src="@per.Imagen" class="card-img-top" style="height:200px">
+                <div class="card-body">
+                    <h5 class="card-title">@per.Nombre</h5>
+                    <p class="card-text">ID: @per.IdPersonaje</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
